@@ -27,6 +27,8 @@ var raw = `[
 ]`
 var engineers []Engineer
 
+// Simple example of parsing json and filtering a slice without
+// Any extra memory allocations.
 func main() {
 	err := json.Unmarshal([]byte(raw), &engineers)
 	if err != nil {
